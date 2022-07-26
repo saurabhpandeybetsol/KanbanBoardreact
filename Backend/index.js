@@ -111,7 +111,7 @@ app.put("/api/update/tasks", async (req,res)=>{
    
 });
 
-app.listen(3005,()=>{
+app.listen(process.env.PORT || 3005,()=>{
      console.log("backend server is running on port 3005");
 });
 
