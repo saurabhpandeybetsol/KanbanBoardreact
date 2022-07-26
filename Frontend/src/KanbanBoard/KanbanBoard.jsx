@@ -11,12 +11,12 @@ export default function KanbanBoard(){
 
    const getTasks=async (err)=>{
        try{
-            const res=await axios.get("http://localhost:3005/api/getTasks");
+            const res=await axios.get("https://kanban-board-react.herokuapp.com/api/getTasks");
             console.log(res);
             setTasks(res.data);
-            const FilteredNotCompleted=await  axios.get("http://localhost:3005/api/getTasks/NotCompleted");
-            const FilteredInprogress= await axios.get("http://localhost:3005/api/getTasks/InProgress");
-            const FilteredCompleted= await axios.get("http://localhost:3005/api/getTasks/completed");
+            const FilteredNotCompleted=await  axios.get("https://kanban-board-react.herokuapp.com/api/getTasks/NotCompleted");
+            const FilteredInprogress= await axios.get("https://kanban-board-react.herokuapp.com/api/getTasks/InProgress");
+            const FilteredCompleted= await axios.get("https://kanban-board-react.herokuapp.com/api/getTasks/completed");
            
             setNotCompletedCount(FilteredNotCompleted.data);
             setInProgressCount(FilteredInprogress.data);
