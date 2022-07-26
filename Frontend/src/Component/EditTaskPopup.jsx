@@ -15,7 +15,7 @@ export default ({title,desc,status,storyPoint,priority,id,getTasks}) => {
      //console.log("huih");
      const handleClick =async (e)=>{
       
-      await axios.put("http://localhost:3005/api/update/tasks",{Title:Title,Desc:Desc,Status:Status,Priority:Priority,StoryPoint:StoryPoint,id:id},(res,data)=>{
+      await axios.put("https://kanban-board-react.herokuapp.com/api/update/tasks",{Title:Title,Desc:Desc,Status:Status,Priority:Priority,StoryPoint:StoryPoint,id:id},(res,data)=>{
             res.send(data);
         });
       //  console.log(resData);
