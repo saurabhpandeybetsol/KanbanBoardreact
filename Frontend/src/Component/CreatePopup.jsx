@@ -13,7 +13,7 @@ export default ({getTasks}) => {
      const [StoryPoint,setStoryPoint]=useState("");
 
      const handleClick =async (e)=>{
-        const resData=await axios.post("http://localhost:3005/api/tasks",{Title:Title,Desc:Desc,Status:Status,Priority:Priority,StoryPoint:StoryPoint},(res,data)=>{
+        const resData=await axios.post("https://kanban-board-react.herokuapp.com/api/tasks",{Title:Title,Desc:Desc,Status:Status,Priority:Priority,StoryPoint:StoryPoint},(res,data)=>{
 
         });
         console.log(resData);
